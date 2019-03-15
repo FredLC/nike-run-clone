@@ -32,6 +32,7 @@
 		48473AD3223BF5BC004AA9BD /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48473AC1223BF5BC004AA9BD /* Montserrat-MediumItalic.ttf */; };
 		48473AD4223BF5BC004AA9BD /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48473AC2223BF5BC004AA9BD /* Montserrat-BoldItalic.ttf */; };
 		48473AD6223C0DB5004AA9BD /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48473AD5223C0DB5004AA9BD /* CurrentRunVC.swift */; };
+		48C50A33223C1D2400295487 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C50A32223C1D2400295487 /* LocationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		48473AC1223BF5BC004AA9BD /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
 		48473AC2223BF5BC004AA9BD /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		48473AD5223C0DB5004AA9BD /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
+		48C50A32223C1D2400295487 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		48473AAE223BF5A6004AA9BD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				48C50A32223C1D2400295487 /* LocationVC.swift */,
 				48473A99223BF31A004AA9BD /* StartRunVC.swift */,
 				48473A9B223BF31A004AA9BD /* LogRunVC.swift */,
 				48473AD5223C0DB5004AA9BD /* CurrentRunVC.swift */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C50A33223C1D2400295487 /* LocationVC.swift in Sources */,
 				48473A9C223BF31A004AA9BD /* LogRunVC.swift in Sources */,
 				48473A98223BF31A004AA9BD /* AppDelegate.swift in Sources */,
 				48473AD6223C0DB5004AA9BD /* CurrentRunVC.swift in Sources */,
