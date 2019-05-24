@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import MapKit
 
 class CurrentRunVC: LocationVC {
 
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var paceLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var sliderBackground: UIImageView!
     @IBOutlet weak var sliderImageVIew: UIImageView!
     
+    var startLocation: CLLocation!
+    var lastLocation: CLLocation!
+    var runDistance = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +29,23 @@ class CurrentRunVC: LocationVC {
         sliderImageVIew.addGestureRecognizer(swipeGesture)
         sliderImageVIew.isUserInteractionEnabled = true
         swipeGesture.delegate = self as? UIGestureRecognizerDelegate
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        manager?.delegate = self
+        manager?.distanceFilter = 10
+        startRun()
+    }
+    
+    func startRun() {
+        manager?.startUpdatingLocation()
+    }
+    
+    func endRun() {
+        manager?.stopUpdatingLocation()
+    }
+    
+    @IBAction func pauseButtonPressed(_ sender: Any) {
     }
     
     @objc func endRunSwiped(sender: UIPanGestureRecognizer) {
@@ -46,4 +71,22 @@ class CurrentRunVC: LocationVC {
         }
     }
 
+}
+
+extension CurrentRunVC: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            checkLocationAuthStatus()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if startLocation == nil {
+            startLocation = locations.first
+        } else if let location = locations.last {
+            runDistance += lastLocation.distance(from: location)
+            distanceLabel.text = "\(runDistance)"
+        }
+        lastLocation = locations.last
+    }
 }
