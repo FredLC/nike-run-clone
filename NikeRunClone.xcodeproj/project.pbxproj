@@ -99,7 +99,6 @@
 				48473AB0223BF5AF004AA9BD /* Model */,
 				48473AAF223BF5AB004AA9BD /* View */,
 				48473AAE223BF5A6004AA9BD /* Controller */,
-				48473AAD223BF59C004AA9BD /* Extensions */,
 				48473AAB223BF58C004AA9BD /* Resources */,
 				48473A97223BF31A004AA9BD /* AppDelegate.swift */,
 				48473A9D223BF31A004AA9BD /* Main.storyboard */,
@@ -133,13 +132,6 @@
 				48473ABC223BF5BC004AA9BD /* Montserrat-ThinItalic.ttf */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		48473AAD223BF59C004AA9BD /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		48473AAE223BF5A6004AA9BD /* Controller */ = {
