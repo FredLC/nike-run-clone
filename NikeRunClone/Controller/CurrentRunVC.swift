@@ -21,6 +21,8 @@ class CurrentRunVC: LocationVC {
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
     var runDistance = 0.0
+    var counter = 0
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +41,21 @@ class CurrentRunVC: LocationVC {
     
     func startRun() {
         manager?.startUpdatingLocation()
+        startTimer()
     }
     
     func endRun() {
         manager?.stopUpdatingLocation()
+    }
+    
+    func startTimer() {
+        durationLabel.text = counter.formatTimeDurationToString()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateCounter() {
+        counter += 1
+        durationLabel.text = counter.formatTimeDurationToString()
     }
     
     @IBAction func pauseButtonPressed(_ sender: Any) {
