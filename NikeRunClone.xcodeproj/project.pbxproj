@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48437A9A22A2AC1C00777450 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48437A9922A2AC1C00777450 /* Constants.swift */; };
 		48473A98223BF31A004AA9BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48473A97223BF31A004AA9BD /* AppDelegate.swift */; };
 		48473A9A223BF31A004AA9BD /* StartRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48473A99223BF31A004AA9BD /* StartRunVC.swift */; };
 		48473A9C223BF31A004AA9BD /* LogRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48473A9B223BF31A004AA9BD /* LogRunVC.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48437A9922A2AC1C00777450 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48473A94223BF31A004AA9BD /* NikeRunClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikeRunClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48473A97223BF31A004AA9BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48473A99223BF31A004AA9BD /* StartRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRunVC.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		48437A9822A2ABFA00777450 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				48437A9922A2AC1C00777450 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		48473A8B223BF31A004AA9BD = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 				48473AAF223BF5AB004AA9BD /* View */,
 				48473AAE223BF5A6004AA9BD /* Controller */,
 				48980AFB229995500081A131 /* Extensions */,
+				48437A9822A2ABFA00777450 /* Utilities */,
 				48473AAB223BF58C004AA9BD /* Resources */,
 				48473A97223BF31A004AA9BD /* AppDelegate.swift */,
 				48473A9D223BF31A004AA9BD /* Main.storyboard */,
@@ -337,6 +348,7 @@
 				48473AD6223C0DB5004AA9BD /* CurrentRunVC.swift in Sources */,
 				489EAC2022A156A5009346E2 /* Run.swift in Sources */,
 				48473A9A223BF31A004AA9BD /* StartRunVC.swift in Sources */,
+				48437A9A22A2AC1C00777450 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
