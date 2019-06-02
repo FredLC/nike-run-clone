@@ -10,11 +10,32 @@ import UIKit
 
 class LogRunVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
 
 }
 
+extension LogRunVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Run.getRuns()?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "runLogCell") as? RunLogCell {
+            guard let run = Run.getRuns()?[indexPath.row] else {
+                return RunLogCell()
+            }
+            cell.configureCell(run: run)
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    
+}

@@ -120,11 +120,9 @@ extension CurrentRunVC: CLLocationManagerDelegate {
             startLocation = locations.first
         } else if let location = locations.last {
             runDistance += lastLocation.distance(from: location)
-            let runDistanceMiles = runDistance * 0.000621371
-            let runDistanceRounded = round(100*runDistanceMiles)/100
-            distanceLabel.text = "\(runDistanceRounded)"
-            if counter > 0 && runDistanceRounded > 0 {
-                paceLabel.text = calculatePace(time: counter, miles: runDistanceRounded)
+            distanceLabel.text = "\(runDistance.convertMetersToMiles(places: 2))"
+            if counter > 0 && runDistance > 0 {
+                paceLabel.text = calculatePace(time: counter, miles: runDistance.convertMetersToMiles(places: 2))
             }
         }
         lastLocation = locations.last

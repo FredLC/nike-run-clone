@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48433AAC22A33442003EAF10 /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48433AAB22A33442003EAF10 /* RunLogCell.swift */; };
 		48437A9A22A2AC1C00777450 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48437A9922A2AC1C00777450 /* Constants.swift */; };
 		48473A98223BF31A004AA9BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48473A97223BF31A004AA9BD /* AppDelegate.swift */; };
 		48473A9A223BF31A004AA9BD /* StartRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48473A99223BF31A004AA9BD /* StartRunVC.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48433AAB22A33442003EAF10 /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RunLogCell.swift; path = NikeRunClone/Utilities/RunLogCell.swift; sourceTree = SOURCE_ROOT; };
 		48437A9922A2AC1C00777450 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48473A94223BF31A004AA9BD /* NikeRunClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikeRunClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48473A97223BF31A004AA9BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		48473AAF223BF5AB004AA9BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				48433AAB22A33442003EAF10 /* RunLogCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				48473A98223BF31A004AA9BD /* AppDelegate.swift in Sources */,
 				48473AD6223C0DB5004AA9BD /* CurrentRunVC.swift in Sources */,
 				489EAC2022A156A5009346E2 /* Run.swift in Sources */,
+				48433AAC22A33442003EAF10 /* RunLogCell.swift in Sources */,
 				48473A9A223BF31A004AA9BD /* StartRunVC.swift in Sources */,
 				48437A9A22A2AC1C00777450 /* Constants.swift in Sources */,
 			);
